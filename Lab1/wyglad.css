@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+}
+
+.parent {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+header {
+  size: 32px;
+  padding: 2rem;
+  grid-column: 1 / 4;
+  text-align: center;
+}
+
+.left-side {
+  grid-column: 1 / 2;
+}
+
+main {
+  grid-column: 2 / 3;
+  text-align: center;
+}
+
+footer {
+  grid-column: 1 / 4;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  background-color: #f1f1f1;
+  height: auto;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 30px 30px;
+  text-decoration: none;
+  text-align: center;
+
+}
+
+img {
+  width: auto;
+  max-height: 100%;
+}
+
+li a:hover {
+  background-color: #555555;
+  color: white;
+}
+
+a:hover.navbtn, a:active.navbtn{
+    background-color: rgb(36, 36, 36);
+}
