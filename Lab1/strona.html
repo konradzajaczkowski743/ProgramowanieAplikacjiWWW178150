@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <script src="skrypty.js" type="text/javascript"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projekt 1">
     <meta name="keywords" content="HTML5, CSS3, JavaScript, Kosmos, Misje kosmiczne">
     <meta name="author" content="Konrad Zajączkowski">
     <link rel="stylesheet" href="wyglad.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
     <title>Historia lotów kosmicznych</title>
 </head>
-<body>
+<body onload="startclock()">
 
         <header class="naglowek">
            <h1>Historia lotów kosmicznych</h1>
@@ -27,7 +27,7 @@
             </ul>
             <div class="dataICzas">
                 <p id="data"></p>
-                <p id="czas"></p>
+                <p id="zegarek"></p>
                 <p class="kosmicznyCytat">"To jest mały krok dla człowieka, ale wielki skok dla ludzkości." <br> ~ Neil Armstrong </p>
             </div>
         </aside>
@@ -48,19 +48,6 @@
         </main>
         
         <footer class="stopka">Historia lotów kosmicznych  |  Konrad Zajączkowski  |  UWM ISI 3 III rok</footer>
-
-
-    <script>
-        function aktualizujDateGodzine() {
-            const teraz = new Date();
-            const data = teraz.toLocaleDateString('pl-PL');
-            const godzina = teraz.toLocaleTimeString('pl-PL');
-            document.getElementById('data').textContent = data;
-            document.getElementById('czas').textContent = godzina;
-        }
-        setInterval(aktualizujDateGodzine, 1000);
-        aktualizujDateGodzine();
-    </script>
 
 </body>
 </html>
