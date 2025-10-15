@@ -1,0 +1,131 @@
+:root {
+    --background: #181f28;
+    --background2: #1f2833;
+    --tekst: #66fcf1;
+    --tekst2: #45a29e;
+    --tekst3: #c5c6c7;
+    --podswietlenie: #66fcf1;
+}
+
+.trybJasny {
+    --background: #d8d8d8;
+    --background2: #e6e6e6;
+    --tekst: #0b0c10;
+    --tekst2: #317e79;
+    --tekst3: #45a29e;
+    --podswietlenie: #0b0c10;
+
+}
+
+header {
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.naglowek {
+    background-color: var(--background);
+    color: var(--tekst);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 2px solid var(--tekst2);
+}
+
+.naglowek .logo h1 {
+    margin: 0.3rem;
+    font-size: 2rem;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu a {
+    color: var(--tekst3);
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu a:hover {
+    background-color: var(--tekst2);
+    color: var(--background);
+}
+
+.sekcjaGlowna{
+    flex: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.sekcjaGlowna::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 0;
+}
+
+.trescGlowna {
+    position: relative;
+    margin: auto;
+    max-width: 900px;
+    background-color: rgba(0,0,0,0.4);
+    padding: 2rem;
+    min-height: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.stopka {
+    background-color: var(--background);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--tekst2);
+    border-top: 2px solid var(--tekst2);
+}
+
+.przyciskMotyw {
+    background-color: var(--tekst2);
+    color: var(--background);
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.przyciskMotyw:hover {
+    background-color: var(--podswietlenie);
+    /*transform: scale(1.1);*/
+}
