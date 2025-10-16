@@ -32,7 +32,7 @@ function changeBackground(hexNumber) {
 
 function toggleTheme() {
     const czyJasny = document.body.classList.toggle("trybJasny");
-    // localStorage.setItem("themeMode", isLight ? "light" : "dark");
+    localStorage.setItem("motyw", czyJasny ? "jasny" : "ciemny");
 }
 
 

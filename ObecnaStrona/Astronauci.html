@@ -10,7 +10,9 @@
     <script src="skrypty.js"></script>
 </head>
 <body>
-
+<script>
+    if(localStorage.getItem("motyw") == "jasny" ) onload=toggleTheme();
+</script>
 <header class="naglowek">
     <div class="logo">
         <h1>Astronauci i kosmonauci</h1>
@@ -89,7 +91,7 @@
     <footer class="stopka">
         Historia lotów kosmicznych  |  Konrad Zajączkowski  |  UWM ISI 3 III rok
         <br>
-        <button class="przyciskMotyw" onclick="toggleTheme()">🌓 Zmień motyw</button>
+        <button class="przyciskMotyw" onclick="toggleTheme()">Zmień motyw</button>
     </footer>
 
 </body>

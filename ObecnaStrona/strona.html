@@ -11,7 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Historia lotów kosmicznych</title>
 </head>
-<body onload="startclock()">
+<body >
+        <script>
+        if(localStorage.getItem("motyw") == "jasny" ) onload=toggleTheme();
+        </script>
 
         <header class="naglowek">
            <h1>Historia lotów kosmicznych</h1>
@@ -51,7 +54,7 @@
         <footer class="stopka">
             Historia lotów kosmicznych  |  Konrad Zajączkowski  |  UWM ISI 3 III rok
             <br>
-            <button class="przyciskMotyw" onclick="toggleTheme()">🌓 Zmień motyw</button>
+            <button class="przyciskMotyw" onclick="toggleTheme()">Zmień motyw</button>
 
 
         </footer>
