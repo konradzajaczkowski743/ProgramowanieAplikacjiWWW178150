@@ -1,94 +1,37 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
-    <link rel="stylesheet" href="../css/styleGaleria.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="../js/skrypty.js"></script>
-</head>
-<body>
 
-<script>
-    if(localStorage.getItem("motyw") === "jasny" ) onload=toggleTheme();
-</script>
-
-<header class="naglowek">
-    <div class="logo">
-        <h1>Galeria i multimedia</h1>
-        <p>Zdjęcia, filmy i dźwięki, które ukazują piękno Wszechświata</p>
+<section class="galeria">
+    <h3>Galeria zdjęć</h3>
+    <div class="siatkaGalerii">
+        <figure><img src="obrazy/iss.jpg" alt="ISS"><figcaption>Międzynarodowa Stacja Kosmiczna</figcaption></figure>
+        <figure><img src="obrazy/moowalk.jpg" alt="Spacer po Księżycu"><figcaption>Spacer po Księżycu</figcaption></figure>
+        <figure><img src="obrazy/falcon9.jpg" alt="Falcon 9"><figcaption>Start rakiety Falcon 9</figcaption></figure>
+        <figure><img src="obrazy/mglawica.jpg" alt="Mgławica"><figcaption>Kolorowa mgławica</figcaption></figure>
+        <figure><img src="obrazy/saturn.jpg" alt="Saturn"><figcaption>Saturn i jego pierścienie</figcaption></figure>
+        <figure><img src="obrazy/jameswebb.jpg" alt="Teleskop Jamesa Webba"><figcaption>Teleskop Jamesa Webba</figcaption></figure>
     </div>
-    <nav class="menu">
-        <ul>
-            <li><a href="strona.html">Start</a></li>
-            <li><a href="misjeKosmiczne.html">Misje kosmiczne</a></li>
-            <li><a href="Astronauci.html">Astronauci</a></li>
-            <li><a href="Technologie.html">Technologie</a></li>
-            <li><a href="Autor.html">O autorze</a></li>
-        </ul>
-    </nav>
-</header>
+</section>
 
-<main class="sekcjaGlowna">
-    <div class="trescGlowna">
+<section class="multimedia">
 
-        <section class="galeria">
-            <h3>Galeria zdjęć</h3>
-            <div class="siatkaGalerii">
-                <figure><img src="../obrazy/iss.jpg" alt="ISS"><figcaption>Międzynarodowa Stacja Kosmiczna</figcaption></figure>
-                <figure><img src="../obrazy/moowalk.jpg" alt="Spacer po Księżycu"><figcaption>Spacer po Księżycu</figcaption></figure>
-                <figure><img src="../obrazy/falcon9.jpg" alt="Falcon 9"><figcaption>Start rakiety Falcon 9</figcaption></figure>
-                <figure><img src="../obrazy/mglawica.jpg" alt="Mgławica"><figcaption>Kolorowa mgławica</figcaption></figure>
-                <figure><img src="../obrazy/saturn.jpg" alt="Saturn"><figcaption>Saturn i jego pierścienie</figcaption></figure>
-                <figure><img src="../obrazy/jameswebb.jpg" alt="Teleskop Jamesa Webba"><figcaption>Teleskop Jamesa Webba</figcaption></figure>
-            </div>
-        </section>
+    <h3>Dźwięki z kosmosu</h3>
+    <figure>
+        <audio controls>
+            <source src="https://www.nasa.gov/wp-content/uploads/2015/01/590331main_ringtone_smallStep.mp3" type="audio/mpeg">
+        </audio>
+        <figcaption>"To mały krok człowieka, ale wielki skok dla ludzkości"</figcaption>
+    </figure>
 
-        <section class="multimedia">
-<!--            <h3>Start rakiety</h3>-->
-<!--            <video controls width="600">-->
-<!--                <source src="media/launch.mp4" type="video/mp4">-->
-<!--                Twoja przeglądarka nie obsługuje wideo HTML5.-->
-<!--            </video>-->
+    <figure>
+        <audio controls>
+            <source src="https://www.nasa.gov/wp-content/uploads/2015/01/574928main_houston_problem.mp3" type="audio/mpeg">
+        </audio>
+        <figcaption>"Houston, mamy problem"</figcaption>
+    </figure>
 
-            <h3>Dźwięki z kosmosu</h3>
-            <figure>
-                <audio controls>
-                    <source src="https://www.nasa.gov/wp-content/uploads/2015/01/590331main_ringtone_smallStep.mp3" type="audio/mpeg">
-                </audio>
-                <figcaption>"To mały krok człowieka, ale wielki skok dla ludzkości"</figcaption>
-            </figure>
-
-            <figure>
-                <audio controls>
-                    <source src="https://www.nasa.gov/wp-content/uploads/2015/01/574928main_houston_problem.mp3" type="audio/mpeg">
-                </audio>
-                <figcaption>"Houston, mamy problem"</figcaption>
-            </figure>
-
-            <figure>
-                <audio controls>
-                    <source src="https://www.nasa.gov/wp-content/uploads/2015/01/584791main_spookysaturn.mp3" type="audio/mpeg">
-                </audio>
-                <figcaption>Dźwięki Saturna</figcaption>
-            </figure>
-
-
-
-        </section>
-
-    </div>
-</main>
-
-<footer class="stopka">
-    Historia lotów kosmicznych  |  Konrad Zajączkowski  |  UWM ISI 3 III rok
-    <br>
-    <button class="przyciskMotyw" onclick="toggleTheme()">Zmień motyw</button>
-</footer>
-
-
-
-</body>
-</html>
+    <figure>
+        <audio controls>
+            <source src="https://www.nasa.gov/wp-content/uploads/2015/01/584791main_spookysaturn.mp3" type="audio/mpeg">
+        </audio>
+        <figcaption>Dźwięki Saturna</figcaption>
+    </figure>
+</section>

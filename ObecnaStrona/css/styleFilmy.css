@@ -74,7 +74,7 @@ body {
 .sekcjaGlowna{
     flex: 1;
     position: relative;
-    background-image: url('../obrazy/Nasasrodek.jpg');
+    background-image: url('../obrazy/NASA_Earth.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -128,4 +128,5 @@ body {
 
 .przyciskMotyw:hover {
     background-color: var(--podswietlenie);
+    /*transform: scale(1.1);*/
 }

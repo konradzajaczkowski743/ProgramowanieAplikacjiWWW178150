@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astronauci i kosmonauci</title>
-    <link rel="stylesheet" href="../css/styleAstronauci.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="../js/skrypty.js"></script>
-</head>
-<body>
-<script>
-    if(localStorage.getItem("motyw") === "jasny" ) onload=toggleTheme();
-</script>
-<header class="naglowek">
-    <div class="logo">
-        <h1>Astronauci i kosmonauci</h1>
-    </div>
-    <nav class="menu">
-        <ul>
-            <li><a href="strona.html">Start</a></li>
-            <li><a href="misjeKosmiczne.html">Misje kosmiczne</a></li>
-            <li><a href="Technologie.html">Technologie</a></li>
-            <li><a href="Galeria.html">Galeria</a></li>
-            <li><a href="Autor.html">O autorze</a></li>
-        </ul>
-    </nav>
-</header>
 
-<main class="sekcjaGlowna">
-    <div class="trescGlowna">
         <h2>Pionierzy lotów załogowych</h2>
         <p>
             Od pierwszego lotu Jurija Gagarina po współczesne misje NASA, ESA i SpaceX — astronauci i kosmonauci
@@ -50,49 +19,38 @@
             <tbody>
             <tr>
                 <td>Jurij Gagarin</td>
-                <td><img src="../obrazy/Yuri_Gagarin_with_awards.jpg" alt="Yuri"></td>
+                <td><img src="obrazy/Yuri_Gagarin_with_awards.jpg" alt="Yuri"></td>
                 <td>ZSRR</td>
                 <td>Wostok 1 (1961)</td>
                 <td>Pierwszy człowiek w kosmosie</td>
             </tr>
             <tr>
                 <td>Neil Armstrong</td>
-                <td><img src="../obrazy/Armstrong.jpg" alt="Armstrong"></td>
+                <td><img src="obrazy/Armstrong.jpg" alt="Armstrong"></td>
                 <td>USA</td>
                 <td>Apollo 11 (1969)</td>
                 <td>Pierwszy człowiek na Księżycu</td>
             </tr>
             <tr>
                 <td>Valentina Tierieszkowa</td>
-                <td><img src="../obrazy/Valentina.jpg" alt="Valentina"></td>
+                <td><img src="obrazy/Valentina.jpg" alt="Valentina"></td>
                 <td>ZSRR</td>
                 <td>Wostok 6 (1963)</td>
                 <td>Pierwsza kobieta w kosmosie</td>
             </tr>
             <tr>
                 <td>Buzz Aldrin</td>
-                <td><img src="../obrazy/Aldrin.jpg" alt="Aldrin"></td>
+                <td><img src="obrazy/Aldrin.jpg" alt="Aldrin"></td>
                 <td>USA</td>
                 <td>Apollo 11 (1969)</td>
                 <td>Drugi człowiek na Księżycu</td>
             </tr>
             <tr>
                 <td>Chris Hadfield</td>
-                <td><img src="../obrazy/Hadfield.jpg" alt="Hadfield"></td>
+                <td><img src="obrazy/Hadfield.jpg" alt="Hadfield"></td>
                 <td>Kanada</td>
                 <td>STS-74 (1995)</td>
                 <td>Znany z popularyzacji nauki i muzyki w kosmosie</td>
             </tr>
             </tbody>
         </table>
-    </div>
-</main>
-
-    <footer class="stopka">
-        Historia lotów kosmicznych  |  Konrad Zajączkowski  |  UWM ISI 3 III rok
-        <br>
-        <button class="przyciskMotyw" onclick="toggleTheme()">Zmień motyw</button>
-    </footer>
-
-</body>
-</html>

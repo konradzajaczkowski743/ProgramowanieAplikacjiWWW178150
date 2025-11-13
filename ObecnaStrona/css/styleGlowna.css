@@ -71,10 +71,10 @@ body {
     color: var(--background);
 }
 
-.sekcjaGlowna{
+.sekcjaGlowna {
     flex: 1;
     position: relative;
-    background-image: url('../obrazy/Nasasrodek.jpg');
+    background-image: url("../obrazy/Stronaglowna.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -96,6 +96,7 @@ body {
 
 .trescGlowna {
     position: relative;
+    font-size: 1.5rem;
     margin: auto;
     max-width: 900px;
     background-color: rgba(0,0,0,0.4);
@@ -103,6 +104,18 @@ body {
     min-height: 100%;
     flex-direction: column;
     box-sizing: border-box;
+}
+
+.dataICzas {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--tekst2);
+}
+
+.kosmicznyCytat {
+    font-style: italic;
+    color: var(--tekst2);
+    margin-top: 10px;
 }
 
 .stopka {
@@ -128,4 +141,5 @@ body {
 
 .przyciskMotyw:hover {
     background-color: var(--podswietlenie);
+    transform: scale(1.1);
 }
