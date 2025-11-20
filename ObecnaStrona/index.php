@@ -1,36 +1,23 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+include('cfg.php');
+include('showpage.php');
 
-$idp = isset($_GET['idp']) ? $_GET['idp'] : 'Glowna';
+$idp = isset($_GET['idp']) ? $_GET['idp'] : 1;
 
-$allowed = ['Glowna','misjeKosmiczne','Astronauci','Technologie','Galeria','Autor','Filmy'];
-$baseDir = __DIR__ . '/html/';
-$defaultFile = $baseDir . 'Glowna.html';
 
-if (in_array($idp, $allowed, true)) {
-    $file = $baseDir . $idp . '.html';
-    if (file_exists($file)) {
-        $strona = $file;
-    } else {
-        $strona = $defaultFile;
-        $idp = 'Glowna';
-    }
-} else {
-    $strona = $defaultFile;
-    $idp = 'Glowna';
-}
-
-/* przypisz odpowiedni plik CSS dla danej podstrony */
 $styleMap = [
-    'Glowna' => 'styleGlowna.css',
-    'misjeKosmiczne' => 'styleMisje.css',
-    'Astronauci' => 'styleAstronauci.css',
-    'Technologie' => 'styleTechnologie.css',
-    'Galeria' => 'styleGaleria.css',
-    'Autor' => 'styleAutor.css',
-    'Filmy' => 'styleFilmy.css'
+    1 => 'styleGlowna.css',
+    2 => 'styleMisje.css',
+    3 => 'styleAstronauci.css',
+    4 => 'styleTechnologie.css',
+    5 => 'styleFilmy.css',
+    6 => 'styleGaleria.css',
+    7 => 'styleAutor.css'
 ];
+
 $style = isset($styleMap[$idp]) ? $styleMap[$idp] : 'styleGlowna.css';
+
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -55,20 +42,27 @@ $style = isset($styleMap[$idp]) ? $styleMap[$idp] : 'styleGlowna.css';
     </div>
     <nav class="menu">
         <ul>
-            <li><a href="index.php?idp=Glowna">Strona główna</a></li>
-            <li><a href="index.php?idp=misjeKosmiczne">Misje kosmiczne</a></li>
-            <li><a href="index.php?idp=Astronauci">Astronauci</a></li>
-            <li><a href="index.php?idp=Technologie">Technologie</a></li>
-            <li><a href="index.php?idp=Galeria">Galeria</a></li>
-            <li><a href="index.php?idp=Autor">O autorze</a></li>
-            <li><a href="index.php?idp=Filmy">Filmy</a></li>
+            <li><a href="index.php?idp=1">Strona główna</a></li>
+            <li><a href="index.php?idp=2">Misje kosmiczne</a></li>
+            <li><a href="index.php?idp=3">Astronauci</a></li>
+            <li><a href="index.php?idp=4">Technologie</a></li>
+            <li><a href="index.php?idp=5">Filmy</a></li>
+            <li><a href="index.php?idp=6">Galeria</a></li>
+            <li><a href="index.php?idp=7">O autorze</a></li>
         </ul>
     </nav>
 </header>
 
 <main class="sekcjaGlowna">
     <div class="trescGlowna">
-        <?php include($strona); ?>
+        <?php
+            if (isset($_GET['idp'])) {
+                $idp = $_GET['idp'];
+                echo PokazPodstrone($idp);
+            } else {
+                echo PokazPodstrone(1); // domyślna strona
+        }
+        ?>
     </div>
 </main>
 
